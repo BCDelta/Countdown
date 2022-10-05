@@ -1,0 +1,39 @@
+
+ #title {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+}
+p.center {
+    text-align: center;
+    color: white;
+    font-family: Garamond, serif;
+    font-size: 20px;
+}
+p.center:first-child {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 46px;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(-120deg, #4088e6, #6559d8, #9749ca, #bb3f85, #e1307a, #f33737de);
+    background-attachment: fixed;
+    background-size: 400% 400%;
+    animation: reactiveGradient 20s ease-in-out infinite;
+}
+@keyframes reactiveGradient {
+    0% {background-position: 0% 50%;}
+    50%{background-position: 100% 0%;}
+    100%{background-position: 0% 50%;}
+}
+
+#header {
+    position: relative;
+    height: 500px;
+}
