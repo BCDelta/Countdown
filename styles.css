@@ -1,22 +1,20 @@
 #title {
+    margin: auto;
+    margin-top: 10%;
     background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
     text-align: center;
     padding: 10px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 50%;
 }
 p.center {
     text-align: center;
     color: white;
     font-family: Garamond, serif;
-    font-size: 20px;
+    font-size: 2em;
 }
 p.center:first-child {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 46px;
+    font-size: 3em;
 }
 
 body {
@@ -34,10 +32,11 @@ body {
 
 #header {
     position: relative;
-    height: 500px;
 }
 
 #countdown {
+    position: relative;
+    top: 50px;
     margin: auto;
     width: 50%;
     padding: 10px;
@@ -46,7 +45,7 @@ body {
     float: left;
     margin: 1%;
     height: auto;
-    width: 22%;
+    width: 23%;
     background: rgba(0, 0, 0, 0.3);
     box-shadow: 0 5px 20px 2px rgba(0, 0, 0, 0.5);
     color: white;
@@ -63,3 +62,16 @@ h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-variant: small-caps;
 }
+
+@media screen and (max-width: 1000px) {
+    .card {
+        float: none;
+        width: 100%;
+        box-sizing: border-box;
+        
+    }
+    #countdown {
+        display: block;
+        width: 75%;
+    }
+  }
