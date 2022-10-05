@@ -15,7 +15,10 @@ function countdown() {
     var minutes = 59 - currentTime.getMinutes();                    //Create minute countdown
     var hours = 23 - currentTime.getHours();                        //Create hour countdown
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d57b177481feef64f7748fcff3e54fedd7355282
     let timeLeft = tripDate.getTime() - currentTime.getTime();      //Calculate timeleft in miliseconds
 
     var totalSeconds = timeLeft / milisecondsPerSecond;
