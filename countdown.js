@@ -12,12 +12,13 @@ function countdown() {
 
     var seconds = 59 - currentTime.getSeconds();                    //Create second countdown
 
-    var minutes = 59 - currentTime.getMinutes();                    //Create minute countdown
-    var hours = 23 - currentTime.getHours();                        //Create hour countdown
+    var minutes = -(currentTime.getMinutes() - tripDate.getMinutes());
+    var hours = 23 - (currentTime.getHours() - tripDate.getHours());
 
     let timeLeft = tripDate.getTime() - currentTime.getTime();      //Calculate timeleft in miliseconds
 
     var totalSeconds = timeLeft / milisecondsPerSecond;
+    
     var totalMinutes = totalSeconds / secondsPerMinute;
     var totalHours = totalMinutes / minutesPerHour;
     var totalDays = totalHours / hoursPerDay;                       //Converted miliseconds to days left
