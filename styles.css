@@ -68,10 +68,16 @@ h2 {
         float: none;
         width: 100%;
         box-sizing: border-box;
+        padding-bottom: 5px;
+        height: 110px;
         
     }
     #countdown {
         display: block;
         width: 75%;
+    }
+    .time {
+        position: relative;
+        top: 15px;
     }
   }
