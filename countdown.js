@@ -15,10 +15,10 @@ function countdown() {
     let timeLeft = tripDate.getTime() - currentTime.getTime();      //Calculate timeleft in miliseconds
 
     var totalSeconds = timeLeft / milisecondsPerSecond;             //Calculated total seconds
-    
-    var totalMinutes = totalSeconds / secondsPerMinute;             //Calculated total minutes
-    var totalHours = totalMinutes / minutesPerHour;                 //Calculated total hours
-    var totalDays = (totalHours / hoursPerDay);                     //Calculated total days 
+    var totalMinutes = totalSeconds / secondsPerMinute;
+    var totalHours = totalMinutes / minutesPerHour;
+
+    var totalDays = Math.floor(totalHours / hoursPerDay);
 
     //If there is still time remaining
     if(timeLeft > 0) {
@@ -27,7 +27,7 @@ function countdown() {
 
         //Make minute countdown advance by 60 minutes when the current minute passes event minute
         if(currentTime.getMinutes() > tripDate.getMinutes()) {
-            minutes = 60 - (currentTime.getMinutes() - tripDate.getMinutes());
+            minutes = 59 - (currentTime.getMinutes() - tripDate.getMinutes());
         }
         //Find difference in current minutes to event minutes, -1 used in consideration to second countdown
         else {
@@ -43,28 +43,28 @@ function countdown() {
             hours = Math.abs(currentTime.getHours() - tripDate.getHours()) - 1;
         }
 
-        //If seconds is 0, subtract a minute
-        if(seconds < 1) {
-            minutes--;
-        }
-        //If the minutes is 0, subtract and hour and reset minute counter
-        if(minutes < 1) {
-            hours--;
-            minutes = 59;
-        }
-        //If the hours is 0, subtract the days and reset the hour counter
-        //23 for hours is used in consideration of minute countdown
-        if(hours < 1) {
+        if(hours < 1 && totalDays > 0) {
             totalDays--;
             hours = 23;
         }
 
+        if(minutes < 1 && hours > 0) {
+            hours--;
+            minutes = 59;
+        }
+        if(seconds < 1 && minutes > 0) {
+            minutes--;
+        }
+        
         //Display values in the timecards
         var countdownCards = document.getElementsByClassName("time");
-        countdownCards[0].querySelector("h2").innerHTML = Math.floor(totalDays);
+        countdownCards[0].querySelector("h2").innerHTML = totalDays;
         countdownCards[1].querySelector("h2").innerHTML = hours;
         countdownCards[2].querySelector("h2").innerHTML = minutes;
         countdownCards[3].querySelector("h2").innerHTML = seconds;
+
+        var displayDate = document.getElementsByClassName("displayDate");
+        displayDate[0].innerHTML = tripDate.toLocaleDateString() + " " + tripDate.toLocaleTimeString();
     }
 
     //Display contents
