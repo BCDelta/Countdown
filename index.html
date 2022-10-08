@@ -6,6 +6,9 @@
         <script src="countdown.js"></script>
     </head>
     <body>
+        
+        window.onload = countdown()
+        
         <div id="header">
             <div id="title">
                 <p class="center">Japan Trip Countdown<p>
@@ -14,7 +17,7 @@
                     <p class="displayDate"></p>
             </div>       
         </div>
-        <div id="countdown" onload="countdown()">
+        <div id="countdown">
             <div class="card">
                 <div class="time">
                     <h2>00</h2>
