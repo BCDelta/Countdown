@@ -8,7 +8,7 @@ setInterval(countdown, milisecondsPerSecond);
 var seconds, minutes, hours;
 
 function countdown() {
-    const tripDate = new Date("March 3, 2023 07:25:00");            //Set our trip date
+    const tripDate = new Date("March 3, 2023 08:25:00");            //Set our trip date
 
     let currentTime = new Date();                                   //Set current date
 
