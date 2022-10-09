@@ -66,7 +66,7 @@ function countdown() {
         var displayDate = document.getElementsByClassName("displayDate");
         displayDate[0].innerHTML = tripDate.toLocaleDateString() + " " + tripDate.toLocaleTimeString();
         
-        setTimeout(countdown, 1000);
+        setInterval(countdown, 1000);
     }
 
     //Display contents
