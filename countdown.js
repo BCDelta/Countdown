@@ -8,7 +8,7 @@ setInterval(countdown, milisecondsPerSecond);
 var seconds, minutes, hours;
 
 function countdown() {
-    const tripDate = new Date("March 3, 2023 08:15:00");            //Set our trip date
+    const tripDate = new Date("March 3, 2023 07:25:00");            //Set our trip date
 
     let currentTime = new Date();                                   //Set current date
 
@@ -40,7 +40,7 @@ function countdown() {
         }
         //If the difference in current hours to even hours, -1 used in consideration to hour countdown
         else {
-            hours = Math.abs(currentTime.getHours() - tripDate.getHours()) - 1;
+            hours = Math.abs(currentTime.getHours() - tripDate.getHours());
         }
 
         if(hours < 1 && totalDays > 0) {
@@ -66,7 +66,4 @@ function countdown() {
         var displayDate = document.getElementsByClassName("displayDate");
         displayDate[0].innerHTML = tripDate.toLocaleDateString() + " " + tripDate.toLocaleTimeString();
     }
-
-    //Display contents
-    //document.getElementById("countdown").innerHTML = Math.floor(totalDays) + " " + hours + " " + minutes + " " + seconds;
 }
