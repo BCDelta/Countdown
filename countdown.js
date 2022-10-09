@@ -3,7 +3,7 @@ const secondsPerMinute = 60;                                    //How many secon
 const minutesPerHour = 60;                                      //How many minutes per hour
 const hoursPerDay = 24;                                         //How many hours per day 
 
-setInterval(countdown, milisecondsPerSecond);
+//setInterval(countdown, milisecondsPerSecond);
 
 var seconds, minutes, hours;
 
@@ -55,7 +55,7 @@ function countdown() {
         if(seconds < 1 && minutes > 0) {
             minutes--;
         }
-        
+
         //Display values in the timecards
         var countdownCards = document.getElementsByClassName("time");
         countdownCards[0].querySelector("h2").innerHTML = totalDays;
@@ -65,5 +65,7 @@ function countdown() {
 
         var displayDate = document.getElementsByClassName("displayDate");
         displayDate[0].innerHTML = tripDate.toLocaleDateString() + " " + tripDate.toLocaleTimeString();
+        
+        setInterval(countdown, 1000);
     }
 }
