@@ -36,7 +36,7 @@ function countdown() {
 
         //Make hour countdown advance by 24 hours when the current hour passes the even hour
         if(currentTime.getHours() > tripDate.getHours()) {
-            hours = 24 - Math.abs(currentTime.getHours() - tripDate.getHours());
+            hours = 23 - Math.abs(currentTime.getHours() - tripDate.getHours());
         }
         //If the difference in current hours to even hours, -1 used in consideration to hour countdown
         else {
