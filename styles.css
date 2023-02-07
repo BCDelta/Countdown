@@ -1,3 +1,22 @@
+#background-image {
+    background-image: url(./images/Cold-Evenings.png);
+    width: 100vw;
+    height: 100vh;
+}
+#background-gradient {
+    float: left;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #d369cc 46%, #f3f2f0 100%);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.7;
+    animation: switch 3.5s linear infinite alternate;
+}
+@keyframes switch {
+    from {opacity: 0.7;}
+    to {opacity: 0.3;}
+    
+}
 #title {
     margin: auto;
     margin-top: 10%;
@@ -19,70 +38,62 @@ p.center:first-child {
 }
 p.displayDate {
     font-style: bold;
-    color: white;
-}
-
-body {
-    margin: 0;
-    background: linear-gradient(-120deg, #4088e6, #6559d8, #9749ca, #bb3f85, #e1307a, #f33737de);
-    background-attachment: fixed;
-    background-size: 400% 400%;
-    animation: reactiveGradient 20s ease-in-out infinite;
-}
-@keyframes reactiveGradient {
-    0% {background-position: 0% 50%;}
-    50%{background-position: 100% 0%;}
-    100%{background-position: 0% 50%;}
+    color: rgb(100, 100, 100);
 }
 
 #header {
     position: relative;
 }
-
 #countdown {
-    position: relative;
-    top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: auto;
-    width: 50%;
+    width: 100%;
     padding: 10px;
 }
+.container-fluid {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .card {
-    float: left;
-    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2.5%;
     height: auto;
-    width: 23%;
-    background: rgba(0, 0, 0, 0.3);
+    width: 200px;
+    background: rgba(243, 243, 243, 0.5);
     box-shadow: 0 5px 20px 2px rgba(0, 0, 0, 0.5);
-    color: white;
+    border-radius: 5%;
+    color: rgb(19, 19, 19);
     box-sizing: border-box; 
 }
-
-h2 {
-    font-size: 40px;
-    text-align: center;
+.time h2 {
+    transition: transform 0.5s ease;
 }
-
+.time h2:hover {
+    transform: scale(1.5);
+    cursor: default;
+}
 .card > p {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-variant: small-caps;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
 }
-
-@media screen and (max-width: 1000px) {
-    .card {
-        float: none;
-        width: 100%;
-        box-sizing: border-box;
-        padding-bottom: 5px;
-        height: 110px;
-        
-    }
+@media only screen and (max-width: 750px) {
     #countdown {
-        display: block;
-        width: 75%;
+        flex-direction: column;
     }
-    .time {
-        position: relative;
-        top: 15px;
+    #countdown:last-child {
+        margin-bottom: 5%;
+    }
+    .card {
+        background-color: rgba(255, 255, 255, 0.767);
     }
   }
