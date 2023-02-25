@@ -69,6 +69,7 @@ function countdown() {
         //Display celebration when total days is less than 1 day
         if(totalDays <= 1) {
             document.getElementById("celebration").style.opacity = 1;
+            document.getElementById("dancing-anime-girl").style.display = "inline-block";
         }
     }
 }
