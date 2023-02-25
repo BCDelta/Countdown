@@ -1,6 +1,10 @@
 #background-image {
-    background-image: url(./images/Cold-Evenings.png);
+    background-image: url(./images/japanFull.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     width: 100vw;
+    background-size: 100vw;
     height: 100vh;
 }
 #background-gradient {
@@ -92,5 +96,15 @@ p.displayDate {
     }
     .time h2 {
         font-size: 25px;
+    }
+    #background-image {
+    background-image: url(./images/japanSmall.jpg);
+    /* Full height */
+    background-size: 100vw;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     }
   }
