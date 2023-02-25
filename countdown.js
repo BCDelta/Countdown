@@ -65,5 +65,10 @@ function countdown() {
 
         var displayDate = document.getElementsByClassName("displayDate");
         displayDate[0].innerHTML = tripDate.toLocaleDateString() + " " + tripDate.toLocaleTimeString();
+        
+        //Display celebration when total days is less than 1 day
+        if(totalDays <= 1) {
+            document.getElementById("celebration").style.opacity = 1;
+        }
     }
 }

@@ -7,6 +7,12 @@
     background-size: 100vw;
     height: 100vh;
 }
+#celebration {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    opacity: 0;
+}
 #background-gradient {
     float: left;
     background-color: #4158D0;
