@@ -65,5 +65,13 @@ function countdown() {
             document.getElementById("celebration").style.opacity = 1;
             document.getElementById("dancing-anime-girl").style.display = "inline-block";
         }
+
+        //Stop countdown to prevent the timer from going negative
+        if(totalSeconds == 0) {
+            countdownCards[0].querySelector("h2").innerHTML = 0;
+            countdownCards[1].querySelector("h2").innerHTML = 0;
+            countdownCards[2].querySelector("h2").innerHTML = 0;
+            countdownCards[3].querySelector("h2").innerHTML = 0;
+        }
     }
 }
