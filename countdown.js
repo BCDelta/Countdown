@@ -34,18 +34,12 @@ function countdown() {
             minutes = Math.abs(currentTime.getMinutes() - tripDate.getMinutes()) - 1;
         }
 
-        //Make hour countdown advance by 24 hours when the current hour passes the even hour
-        if(currentTime.getHours() > tripDate.getHours()) {
-            hours = 24 - Math.abs(currentTime.getHours() - tripDate.getHours());
-        }
-        //If the difference in current hours to even hours, -1 used in consideration to hour countdown
-        else {
-            hours = Math.abs(currentTime.getHours() - tripDate.getHours());
-        }
+        //Calculate hours left
+        hours = 23 - Math.abs(currentTime.getHours() - tripDate.getHours());
 
         if(hours < 1 && totalDays > 0) {
             totalDays--;
-            hours = 23;
+            hours = 24;
         }
 
         if(minutes < 1 && hours > 0) {
