@@ -45,7 +45,7 @@ function countdown() {
 
         if(hours < 1 && totalDays > 0) {
             totalDays--;
-            hours = 24;
+            hours = 23;
         }
 
         if(minutes < 1 && hours > 0) {
